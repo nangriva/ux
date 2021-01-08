@@ -66,7 +66,7 @@ h2 {
 	transition: all 0.2s;
 }
 
-a.item:hover {
+.item:hover {
 	-webkit-transform: translateY(-4%);
 	-ms-transform: translateY(-4%);
 	transform: translateY(-4%);
@@ -96,7 +96,8 @@ a.item:hover {
 
 .main-content .item h3,
 .main-content .item h4,
-.main-content .item p {
+.main-content .item p,
+.main-content .item .flow-link {
 	position: absolute;
 	top: 25%;
 	left: 50%;
@@ -114,22 +115,46 @@ a.item:hover {
 }
 
 .main-content .item p {
-	-webkit-transform: translate(-50%, calc(-50% + 120px));
-	-ms-transform: translate(-50%, calc(-50% + 120px));
-	transform: translate(-50%, calc(-50% + 120px));
+	-webkit-transform: translate(-50%, calc(-50% + 150px));
+	-ms-transform: translate(-50%, calc(-50% + 150px));
+	transform: translate(-50%, calc(-50% + 150px));
+	width: 100%;
+	max-width: 380px;
+}
+
+.main-content .item .flow-link {
+	top: unset;
+	bottom: 50px;
+	padding: 10px 15px 8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #fff;
+	-webkit-box-shadow: 1px 2px 20px 0px rgb(355 67 71 / 20%);
+	-moz-box-shadow: 1px 2px 20px 0px rgb(355 67 71 / 20%);
+	box-shadow: 1px 2px 20px 0px rgb(355 67 71 / 20%);
+	font-weight: bold;
+}
+
+.main-content .item .flow-link:hover {
+	-webkit-box-shadow: 1px 2px 20px 0px rgb(355 67 71 / 50%);
+	-moz-box-shadow: 1px 2px 20px 0px rgb(355 67 71 / 50%);
+	box-shadow: 1px 2px 20px 0px rgb(355 67 71 / 50%);
 }
 
 .main-content .item h3,
 .main-content .item:after,
 .main-content .item h4,
-.main-content .item p {
+.main-content .item p,
+.main-content .item .flow-link {
 	opacity: 0;
 }
 
 .main-content .item:hover h3,
 .main-content .item:hover:after,
 .main-content .item:hover h4,
-.main-content .item:hover p {
+.main-content .item:hover p,
+.main-content .item:hover .flow-link {
 	opacity: 1;
 }
 
@@ -140,6 +165,7 @@ a.item:hover {
 	height: 100%;
 	position: absolute;
 	left: 0;
+	pointer-events: none;
 }
 
 .main-content .item img {

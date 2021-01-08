@@ -85,6 +85,7 @@ h2 {
     margin-right: auto;
     vertical-align: top;
     box-sizing: content-box;
+    max-width: 600px;
 }
 
 .container {

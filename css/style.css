@@ -222,7 +222,10 @@ h2 {
 	.xs-ta-center {text-align: center !important;}
 	.xs-block {display: block;}
 
-	.logo-wrap {width: 25%;}
+	.main-content .item {
+		box-sizing: border-box;
+		max-width: 460px;
+	}
 
 }
 
